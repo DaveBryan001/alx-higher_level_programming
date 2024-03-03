@@ -3,5 +3,5 @@
 
 
 class Square():
+    """ this class defines a square"""
     pass
-    def __init__(self)
