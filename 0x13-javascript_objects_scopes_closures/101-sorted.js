@@ -1,11 +1,16 @@
 #!/usr/bin/node
+const { dict } = require('./101-data');
 
-exports.dict = {
-  1: 'A',
-  2: 'B',
-  3: 'A',
-  4: 'C',
-  5: 'A',
-  6: 'B',
-  7: 'A'
-};
+const occurrencesById = {};
+
+for (const userId in dict) {
+    const occurrence = dict[userId];
+
+    if (occurrence in occurrencesById) {
+        occurrencesById[occurrence].push(userId);
+    } else {
+        occurrencesById[occurrence] = [userId];
+    }
+}
+
+console.log(occurrencesById);
