@@ -1,9 +1,24 @@
 #!/usr/bin/python3
+"""
+This module provides functionalities to connect to a MySQL database
+and retrieve a list of states ordered by their IDs.
+"""
 import MySQLdb
 import sys
 
 
 def list_states(username, password, database):
+    """
+    Connects to a MySQL database and prints the list of states.
+
+    Args:
+        username (str): The MySQL username.
+        password (str): The MySQL password.
+        database (str): The name of the MySQL database.
+
+    Prints:
+        The list of states ordered by their IDs.
+    """
     try:
         # Connect to the MySQL server
         db = MySQLdb.connect(
