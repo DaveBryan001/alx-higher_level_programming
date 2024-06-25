@@ -7,3 +7,4 @@ CREATE TABLE IF NOT EXISTS states (
     PRIMARY KEY (id)
 );
 INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+ALTER TABLE states ADD CONSTRAINT unique_state_name UNIQUE (name);
